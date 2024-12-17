@@ -10,27 +10,55 @@
             max-width: 600px; 
             margin: 0 auto; 
             padding: 20px; 
-            text-align: center; 
+            text-align: center;
+            background-color: #f4f4f4;
         }
-        input, button { 
-            margin: 10px 0; 
-            padding: 10px; 
-            width: 100%; 
+        h1 {
+            color: #333;
         }
-        #result { 
-            margin-top: 20px; 
-            font-weight: bold; 
+        #inputText {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        #classifyBtn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #classifyBtn:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .spam {
+            background-color: #ffdddd;
+            color: #f44336;
+        }
+        .not-spam {
+            background-color: #ddffdd;
+            color: #4CAF50;
         }
     </style>
 </head>
 <body>
-    <h1>Spam SMS Classifier</h1>
-    <input 
-        type="text" 
+    <h1>Spam Text Classifier</h1>
+    <textarea 
         id="inputText" 
-        placeholder="Enter SMS text to classify"
-    />
-    <button onclick="classifyText()">Classify</button>
+        rows="4" 
+        placeholder="Enter text to classify (email, message, etc.)"
+    ></textarea>
+    <button id="classifyBtn" onclick="classifyText()">Classify</button>
     <div id="result"></div>
     <script src="js/script.js"></script>
 </body>
