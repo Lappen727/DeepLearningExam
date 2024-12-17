@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Spam Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        input, button { 
+            margin: 10px 0; 
+            padding: 10px; 
+            width: 100%; 
+        }
+        #result { 
+            margin-top: 20px; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Spam SMS Classifier</h1>
+    <input 
+        type="text" 
+        id="inputText" 
+        placeholder="Enter SMS text to classify"
+    />
+    <button onclick="classifyText()">Classify</button>
+    <div id="result"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
